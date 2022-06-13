@@ -18,9 +18,10 @@ API:
 - O sistema deverá ser capaz de criar automaticamente as unidades de um empreendimento, especificando a quantidade de blocos, a quantidade de unidades por bloco e um valor para todas as unidades.
 - O sistema deverá ser capaz de atualizar o valor das unidades de um empreendimento, informando o percentual de reajuste para acréscimo do valor
 -- Unidades Vendidas ou Reservadas não podem ter seus valores atualizados, em qualquer situação
+-- O sistema deverá registrar, no banco de dados, um log com a data e o percentual a cada reajuste
 - O sistema deverá mostrar junto a lista de empreendimentos o VGV (Somatório de Valor) Total de Unidades Vendidas e o VGV Total de Unidades Reservadas
 - O sistema deverá exibir junto à lista de empreendimentos o estoque (contagem total) de unidades DISPONÍVEIS
--- O sistema deverá registrar, no banco de dados, um log com a data e o percentual a cada reajuste
+
 - A API deverá ser protegida para acessos não autorizados.
 
 **Considerações**:
