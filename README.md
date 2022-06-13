@@ -7,6 +7,7 @@ Você deverá desenvolver uma API utilizando PHP "vanilla" ou Lumen e consumi-la
 Seguindo o contexto que a Dommus Tecnologia está inserida, a aplicação a ser desenvolvida é para gerenciamento de empreendimentos e unidades.
 
 **Requisitos:**
+
 API:
 - Deverá ser possível cadastrar, listar, editar ou remover empreendimentos.
 - Deverá ser possível cadastrar, listar, editar ou remover unidades.
