@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Collection;
 
 interface EmpreendimentoContract
 {
-    public function getAll($filtro) : Collection;
+    public function getAll($filtro);
 
     public function store(array $data = []): bool;
 
-    public function update(Empreendimento $empreendimento, array $data = []): bool
+    public function update(Empreendimento $empreendimento, array $data = []): bool;
 
     public function destroy(Empreendimento $empreendimento): bool;
 }

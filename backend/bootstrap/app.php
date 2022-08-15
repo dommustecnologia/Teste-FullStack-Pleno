@@ -38,6 +38,8 @@ $app->withEloquent();
 |
 */
 
+$app->bind(App\Contracts\EmpreendimentoContract::class, App\Services\EmpreendimentoService::class);
+
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
     App\Exceptions\Handler::class
