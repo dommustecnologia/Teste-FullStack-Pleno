@@ -37,10 +37,11 @@ export default function AuthUser(){
     }
 
     const http = axios.create({
-        baseURL:"http://backend-dommus.sotero.dev/api",
+        baseURL:"http://localhost:8000/api",
         headers:{
             "Content-type" : "application/json",
-            "Authorization" : `Bearer ${token}`
+            "Authorization" : `Bearer ${token}`,
+            "Access-Control-Allow-Origin":"*"
         }
     });
     return {
