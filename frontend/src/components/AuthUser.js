@@ -37,7 +37,7 @@ export default function AuthUser(){
     }
 
     const http = axios.create({
-        baseURL:"http://localhost:8000/api",
+        baseURL:"http://backend-dommus.sotero.dev/api",
         headers:{
             "Content-type" : "application/json",
             "Authorization" : `Bearer ${token}`
