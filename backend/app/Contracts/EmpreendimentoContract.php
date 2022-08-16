@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Collection;
 
 interface EmpreendimentoContract
 {
-    public function getAll($filtro);
+    public function getAllByFilter($filtro);
 
     public function store(array $data = []): bool;
 

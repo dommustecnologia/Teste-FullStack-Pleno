@@ -38,6 +38,7 @@ $app->withEloquent();
 |
 */
 
+//Bind da Interface de Empreendimento com o respectivo Service
 $app->bind(App\Contracts\EmpreendimentoContract::class, App\Services\EmpreendimentoService::class);
 
 $app->singleton(

@@ -9,13 +9,14 @@ use App\Contracts\EmpreendimentoContract;
 class EmpreendimentoController extends Controller
 {
     //Lista todos os empreendimentos
-    public function getAll($filtro = null, EmpreendimentoContract $empreendimentoContract) 
+    public function getAllByFilter($filtro = null, EmpreendimentoContract $empreendimentoContract) 
     {
-        return $empreendimentoContract->getAll($filtro);
+        return $empreendimentoContract->getAllByFilter($filtro);
     }
 
     //Insere um novo empreendimento
-    public function store (Request $request, EmpreendimentoContract $empreendimentoContract) {
+    public function store (Request $request, EmpreendimentoContract $empreendimentoContract) 
+    {
         if ($empreendimentoContract->store($request->all())) {
             $responseArray = [
                 'status' => 'success', 

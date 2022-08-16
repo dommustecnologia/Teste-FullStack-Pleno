@@ -224,3 +224,46 @@
 #34 {main}
 "} 
 [2022-08-15 16:05:24] local.INFO: EMPREENDIMENTOS:object  
+[2022-08-15 16:12:40] local.INFO: EMPREENDIMENTOS:object  
+[2022-08-15 16:14:06] local.INFO: EMPREENDIMENTOS:  
+[2022-08-15 16:14:51] local.ERROR: Argument 2 passed to Illuminate\Log\LogManager::info() must be of the type array, object given, called in D:\projetos\DOMMUS\Teste-FullStack-Pleno\backend\vendor\illuminate\support\Facades\Facade.php on line 261 {"exception":"[object] (TypeError(code: 0): Argument 2 passed to Illuminate\\Log\\LogManager::info() must be of the type array, object given, called in D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\illuminate\\support\\Facades\\Facade.php on line 261 at D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\illuminate\\log\\LogManager.php:629)
+[stacktrace]
+#0 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\illuminate\\support\\Facades\\Facade.php(261): Illuminate\\Log\\LogManager->info('EMPREENDIMENTOS...', Object(Illuminate\\Database\\Eloquent\\Collection))
+#1 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\app\\Services\\EmpreendimentoService.php(29): Illuminate\\Support\\Facades\\Facade::__callStatic('info', Array)
+#2 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\app\\Http\\Controllers\\EmpreendimentoController.php(14): App\\Services\\EmpreendimentoService->getAll(NULL)
+#3 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Http\\Controllers\\EmpreendimentoController->getAll(NULL, Object(App\\Services\\EmpreendimentoService))
+#4 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\illuminate\\container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#5 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#6 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\illuminate\\container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#7 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\illuminate\\container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#8 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(389): Illuminate\\Container\\Container->call(Array, Array)
+#9 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(355): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#10 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(329): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\EmpreendimentoController), 'getAll', Array)
+#11 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(282): Laravel\\Lumen\\Application->callControllerAction(Array)
+#12 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(262): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#13 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\laravel\\lumen-framework\\src\\Routing\\Pipeline.php(48): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#14 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\app\\Http\\Middleware\\Authenticate.php(42): Laravel\\Lumen\\Routing\\Pipeline->Laravel\\Lumen\\Routing\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#15 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\illuminate\\pipeline\\Pipeline.php(167): App\\Http\\Middleware\\Authenticate->handle(Object(Laravel\\Lumen\\Http\\Request), Object(Closure))
+#16 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\laravel\\lumen-framework\\src\\Routing\\Pipeline.php(30): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#17 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\illuminate\\pipeline\\Pipeline.php(103): Laravel\\Lumen\\Routing\\Pipeline->Laravel\\Lumen\\Routing\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#18 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(426): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#19 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(263): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#20 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(237): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#21 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(173): Laravel\\Lumen\\Application->handleDispatcherResponse(Array)
+#22 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\laravel\\lumen-framework\\src\\Routing\\Pipeline.php(48): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#23 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\barryvdh\\laravel-cors\\src\\HandleCors.php(52): Laravel\\Lumen\\Routing\\Pipeline->Laravel\\Lumen\\Routing\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#24 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\illuminate\\pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle(Object(Laravel\\Lumen\\Http\\Request), Object(Closure))
+#25 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\laravel\\lumen-framework\\src\\Routing\\Pipeline.php(30): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#26 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\illuminate\\pipeline\\Pipeline.php(103): Laravel\\Lumen\\Routing\\Pipeline->Laravel\\Lumen\\Routing\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#27 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(426): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#28 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(175): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#29 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch(NULL)
+#30 D:\\projetos\\DOMMUS\\Teste-FullStack-Pleno\\backend\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#31 {main}
+"} 
+[2022-08-15 21:41:38] local.INFO: EMPREENDIMENTOS:Illuminate\Database\Eloquent\Collection  
+[2022-08-15 21:42:28] local.INFO: EMPREENDIMENTOS 2:Illuminate\Database\Eloquent\Collection  
+[2022-08-15 21:42:55] local.INFO: EMPREENDIMENTOS 2:Illuminate\Database\Eloquent\Collection  
+[2022-08-15 21:44:03] local.INFO: EMPREENDIMENTOS 2:Illuminate\Database\Eloquent\Collection  
+[2022-08-15 23:04:38] local.INFO: filtro  
+[2022-08-15 23:04:38] local.INFO: EMPREENDIMENTOS 2:Illuminate\Database\Eloquent\Collection  

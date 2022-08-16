@@ -18,16 +18,15 @@ class EmpreendimentoService implements EmpreendimentoContract
      *
      * @return Collection
      */
-    public function getAll ($filtro = null) {
+    public function getAllByFilter ($filtro = "a") {
         try {
             if (!empty($filtro)) {
-                $response = Empreendimento::where('nome', 'like', '%' . $filtro . '%')->get();
+                $empreendimentos = Empreendimento::where('nome', 'like', '%' . $filtro . '%')->get();
             }
             else {
-                $response = Empreendimento::get();
-            }
-            Log::info("EMPREENDIMENTOS:".gettype($response));
-            return $response;
+                $empreendimentos = Empreendimento::all();
+            }            
+            return $empreendimentos;
         } catch (Exception $e) {
             Log::info('Erro ao listar os empreendimentos, usuário: '.auth()->user()->name.' mensagem: '.$e->getMessage());
         }
