@@ -3,7 +3,6 @@
 namespace App\Contracts;
 
 use App\Models\Empreendimento;
-use Illuminate\Database\Eloquent\Collection;
 
 interface EmpreendimentoContract
 {

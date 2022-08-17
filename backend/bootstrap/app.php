@@ -38,8 +38,9 @@ $app->withEloquent();
 |
 */
 
-//Bind da Interface de Empreendimento com o respectivo Service
+//Bind das Interface com os respectivos Services
 $app->bind(App\Contracts\EmpreendimentoContract::class, App\Services\EmpreendimentoService::class);
+$app->bind(App\Contracts\UnidadeContract::class, App\Services\UnidadeService::class);
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,

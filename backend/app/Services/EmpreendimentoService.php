@@ -18,7 +18,7 @@ class EmpreendimentoService implements EmpreendimentoContract
      *
      * @return Collection
      */
-    public function getAllByFilter ($filtro = "a") {
+    public function getAllByFilter ($filtro = null) {
         try {
             if (!empty($filtro)) {
                 $empreendimentos = Empreendimento::where('nome', 'like', '%' . $filtro . '%')->get();
