@@ -11,25 +11,31 @@ Seguindo o contexto que a Dommus Tecnologia está inserida, a aplicação a ser 
 API:
 - Deverá ser possível cadastrar, listar, editar, remover ou buscar empreendimentos.
 - Deverá ser possível cadastrar, listar, editar, remover ou buscar unidades.
-- Deverá ser possível atualizar o preço de vendas das unidades de um empreendimento.
+- Deverá ser possível atualizar o preço de venda das unidades de um empreendimento.
 - Deverá ser possível criar unidades em lote para um empreendimento
 
-**Regras de negócio:**
-- Deverá ser possível filtrar empreendimentos em sua respectiva lista.
-- Deverá ser possível buscar empreendimentos usando de código e / ou nome e / ou cidade;
-- Deverá ser possível filtrar unidades, usando uma faixa de preço e / ou status e / ou bloco, em sua respectiva lista;
-- Deverá ser possível buscar unidades usando de código e / ou uma faixa de preço de venda e / ou status e / ou bloco;
+**Domínio:**
+- O usuário poderá filtrar empreendimentos em sua respectiva lista usando de código e / ou nome e / ou cidade.
+- O usuário poderá buscar empreendimentos usando de código e / ou nome e / ou cidade.
+- O usuário poderá filtrar unidades, usando uma faixa de preço e / ou status e / ou bloco, em sua respectiva lista.
+- O usuário poderá buscar unidades usando de código e / ou uma faixa de preço de venda e / ou status e / ou bloco.
+- O usuário poderá criar, editar e remover empreendimentos
+- O usuário poderá criar, editar e remover unidades
+- O sistema não pode excluir unidades com status VENDIDA ou RESERVADA.
+- O sistema não pode excluir empreendimentos que possuam unidades com status VENDIDA ou RESERVADA.
+- Suas listas devem ser paginadas.
 - O sistema deverá ser capaz de criar as unidades de um empreendimento, com o usuário especificando a quantidade de blocos, a quantidade de unidades por bloco e um preço de venda para todas as unidades.
-- O sistema deverá ser capaz de atualizar o preço de venda das unidades de um empreendimento, informando o percentual de reajuste para acréscimo do valor.
+- O usuário poderá atualizar o preço de venda das unidades de um empreendimento, informando o percentual de reajuste para acréscimo do valor.
 -- Unidades Vendidas ou Reservadas não podem ter seus valores atualizados, em qualquer situação
 -- O sistema deverá registrar, no banco de dados, um log com a data e o percentual a cada reajuste
-- O sistema deverá mostrar junto a lista de empreendimentos o VGV (Somatório de Valor) Total de Unidades Vendidas e o VGV Total de Unidades Reservadas
+- O sistema deverá mostrar junto a lista de empreendimentos o VGV (Somatório de Preço) Total de Unidades Vendidas e o VGV Total de Unidades Reservadas
 - O sistema deverá exibir junto à lista de empreendimentos o estoque (contagem total) de unidades DISPONÍVEIS
 - A API deverá ser protegida para acessos não autorizados (pode utilizar autenticação simples com login e senha - não é necessário fazer a tela de login).
 
+
 **Considerações**:
-- Um empreendimento deverá ter: Código, nome, cidade e previsão de entrega.
-- Uma unidade deverá ter: Código, bloco, valor e status.
+- Um empreendimento deverá ter como atributos: Código, nome, cidade e previsão de entrega.
+- Uma unidade deverá ter como atributos: Código, bloco, preço de venda e status.
 - - Uma unidade deverá ter 3 status: VENDIDA, DISPONÍVEL, RESERVADA.
 - Uma unidade deverá ser vinculada a um e apenas um empreendimento.
 - Um empreendimento poderá ter N unidades atreladas a ele.
